@@ -71,6 +71,3 @@ This is a `POST` method that creates a new question in the database. The paramet
 
 If you want to contribute to this project, please feel free to fork the repository, make your changes, and create a pull request. If you have any questions or need further assistance, feel free to create an issue.
 
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
