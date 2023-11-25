@@ -93,6 +93,11 @@ The application has two main Endpoints:
         }
         ```
 
+## Testing
+
+To test the functionality of the question paper generator, create a sample database using the `create_question` endpoint and then use the `generate_question_paper` endpoint to generate question papers with different parameters. Ensure that the generated question papers meet the specified criteria.
+
+
 ## Extending the Project
 
 This project can be extended in various ways, such as:
