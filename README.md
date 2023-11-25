@@ -32,7 +32,16 @@ This is a Django project that allows you to generate question papers based on ce
 
     This will install the required packages as listed in the `requirements.txt` file. Please note that the versions of the packages are compatible with Python 3.12. If you're using a different version of Python, you might need to use different versions of the packages. Please check the appropriate documentation of each package for more details.
 
-5. **Run the server**
+5. **Run migrations**
+
+    Apply migrations to set up the database:
+
+    ```bash
+    python manage.py makemigrations
+    python manage.py migrate
+    ```
+
+6. **Run the server**
 
     ```bash
     python manage.py runserver
