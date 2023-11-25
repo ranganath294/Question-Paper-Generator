@@ -50,9 +50,9 @@ The application has two main routes:
     - **Description:** Generates a question paper based on the parameters provided in the request.
     - **Parameters:**
         - `total_marks` (optional, default is 100): The total marks for the question paper.
-        - `subject` (required): The subject for which the question paper is to be generated.
+        - `subject` (required, string): The subject for which the question paper is to be generated.
         - `easy_percentage`, `medium_percentage`, `hard_percentage`: The percentage of easy, medium, and hard questions respectively. The sum of these percentages should be 100.
-        - `num_of_easy_ques`, `num_of_medium_ques`, `num_of_hard_ques`: The number of easy, medium, and hard questions respectively.
+        - `num_of_easy_ques` (optional, integer), `num_of_medium_ques` (optional, integer), `num_of_hard_ques` (optional, integer): The number of easy, medium, and hard questions respectively.
 
     - **Example Request:**
         ```json
@@ -73,18 +73,18 @@ The application has two main routes:
     - **Method:** POST
     - **Description:** Creates a new question in the database.
     - **Parameters:**
-        - `question`: The text of the question.
-        - `subject`: The subject of the question.
-        - `topic`: The topic of the question.
-        - `difficulty`: The difficulty level of the question.
-        - `marks`: The marks for the question.
+        - `question` (string): The text of the question.
+        - `subject` (string): The subject of the question.
+        - `topic` (string): The topic of the question.
+        - `difficulty` (string): The difficulty level of the question.
+        - `marks` (integer): The marks for the question.
 
     - **Example Request:**
         ```json
         {
-            "question": "question",
-            "subject": "Physics",
-            "topic": "topic_1",
+            "question": "What is the capital of France?",
+            "subject": "Geography",
+            "topic": "World Capitals",
             "difficulty": "easy",
             "marks": 10
         }
