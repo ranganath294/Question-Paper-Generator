@@ -41,6 +41,8 @@ This is a Django project that allows you to generate question papers based on ce
     python manage.py migrate
     ```
 
+    **Note:** If you want to create a new database, delete `db.sqlite3` and then run the migrations.
+
 6. **Run the server**
 
     ```bash
@@ -50,7 +52,7 @@ This is a Django project that allows you to generate question papers based on ce
     This will start the Django development server. You can access the application at `http://127.0.0.1:8000/` (Base URL).
 
 ## Using Postman
-You can use Postman to interact with these APIs. Simply enter the URL for the route you want to use, select the appropriate method (GET for generate_question_paper and POST for create_question), and enter the parameters in the Body section in JSON format.
+You can use Postman to interact with these APIs. Simply enter the URL for the route you want to use, select the appropriate method (GET for `generate_question_paper` and POST for `create_question`), and enter the parameters in the Body section in JSON format.
 
 ## API Documentation
 
@@ -60,7 +62,7 @@ The application has two main routes:
 
     - **Method:** GET
     - **End Point:** `http://127.0.0.1:8000/generate_question_paper` or `your_base_url/generate_question_paper`
-    - Make sure you replace base URL with your base URL
+    - Make sure you replace the base URL with your base URL
     - **Description:** Generates a question paper based on the parameters provided in the request.
     - **Parameters:**
         - `total_marks` (optional, default is 100): The total marks for the question paper.
@@ -86,7 +88,7 @@ The application has two main routes:
 
     - **Method:** POST
     - **End Point:** `http://127.0.0.1:8000/create_question` or `your_base_url/create_question`
-    - Make sure you replace base URL with your base URL
+    - Make sure you replace the base URL with your base URL
     - **Description:** Creates a new question in the database.
     - **Parameters:**
         - `question` (string): The text of the question.
@@ -110,6 +112,11 @@ The application has two main routes:
 
 To test the functionality of the question paper generator, create a sample database using the `create_question` endpoint and then use the `generate_question_paper` endpoint to generate question papers with different parameters. Ensure that the generated question papers meet the specified criteria.
 
+## Sample Database
+
+I am providing a sample database (`db.sqlite3`) with the project. If you wish to use this sample database, simply start the server. If you want to create a new database, delete `db.sqlite3` and then run the migrations before starting the server.
+
+**Note:** The example database provided is a local database file.
 
 ## Extending the Project
 
