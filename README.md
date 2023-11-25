@@ -54,11 +54,12 @@ You can use Postman to interact with these APIs. Simply enter the URL for the ro
 
 ## API Documentation
 
-The application has two main Endpoints:
+The application has two main routes:
 
 1. **`generate_question_paper`**
 
     - **Method:** GET
+    - **End Point:** `http://127.0.0.1:8000/generate_question_paper` or `your_base_url/generate_question_paper`
     - **Description:** Generates a question paper based on the parameters provided in the request.
     - **Parameters:**
         - `total_marks` (optional, default is 100): The total marks for the question paper.
@@ -83,6 +84,7 @@ The application has two main Endpoints:
 2. **`create_question`**
 
     - **Method:** POST
+    - **End Point:** `http://127.0.0.1:8000/create_question` or `your_base_url/create_question`
     - **Description:** Creates a new question in the database.
     - **Parameters:**
         - `question` (string): The text of the question.
