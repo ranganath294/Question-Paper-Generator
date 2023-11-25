@@ -40,6 +40,9 @@ This is a Django project that allows you to generate question papers based on ce
 
     This will start the Django development server. You can access the application at `http://127.0.0.1:8000/`.
 
+## Using Postman
+You can use Postman to interact with these APIs. Simply enter the URL for the route you want to use, select the appropriate method (GET for generate_question_paper and POST for create_question), and enter the parameters in the Body section in JSON format.
+
 ## API Documentation
 
 The application has two main routes:
@@ -90,18 +93,13 @@ The application has two main routes:
         }
         ```
 
-## Contributing
-
-If you want to contribute to this project, please feel free to fork the repository, make your changes, and create a pull request. If you have any questions or need further assistance, feel free to create an issue.
-
 ## Extending the Project
 
 This project can be extended in various ways, such as:
 
+- Implementing a tagging system for questions to enhance organization.
+- Adding support for different question types (multiple-choice, short answer, etc.).
+- Implementing topic-wise percentages, providing flexibility in generating question papers that adhere to distribution requirements across different subjects and topics.
+- Creating a user interface for easier interaction.
 - Adding authentication to secure the API endpoints.
 - Implementing more advanced algorithms for question paper generation.
-- Creating a user interface for easier interaction.
-- Adding support for different question types (multiple-choice, short answer, etc.).
-- Implementing a tagging system for questions to enhance organization.
-
-Feel free to explore these possibilities and contribute to the project's growth!
