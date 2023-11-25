@@ -2,6 +2,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
 from .models import *
+from .serializers import *
 from .functions import *
 
 
@@ -91,7 +92,9 @@ def create_question(request):
             question_instance = Questions.objects.create(question=question, subject=subject, topic=topic, difficulty=difficulty, marks=marks)
             question_instance.save()
             
-            return Response({"msg": "Question Created Successfully"}, status=status.HTTP_200_OK)
+            serializer = QuestionSerializer(question_instance)
+            # return Response({"msg": "Question Created Successfully"}, status=status.HTTP_200_OK)
+            return Response(serializer.data, status=status.HTTP_200_OK)
             
         except Exception as e:
             # print(e)

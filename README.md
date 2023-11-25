@@ -84,6 +84,20 @@ The application has two main routes:
         }
         ```
 
+    - **Response:** The response will be a JSON object containing the combinations of marks of questions for each difficulty level that add up to the target marks. If the number of questions for a particular difficulty level is provided, the combinations will include exactly that number of questions.
+
+    - **Example Response:**
+        ```json
+        {
+            "easy_question_combinations": [[1, 2, 1], [4], [1, 3]],
+            "medium_question_combinations": [ ],
+            "hard_question_combinations": [[12, 14], [13, 13]]
+        }
+        ```
+    Here, the numbers represent the marks of the questions in the database. Each array is a combination of marks of questions that add up to the target marks for that difficulty level.
+
+    ```json [1, 1, 2]``` means for a easy paper of 4 marks, the question paper may take question in this type of marks distribution i.e there can 2 one mark questions and 1 two marks question. Note that if there are only 2 one mark questions in the database of that difficulty level of that particular subject, then for making a easy paper of 4 marks, the response won't include ```json [1, 1, 1, 1]``` as there are only two one mark questions available in the database of that difficulty level of that particular subject.
+
 2. **`create_question`**
 
     - **Method:** POST
@@ -107,16 +121,42 @@ The application has two main routes:
             "marks": 10
         }
         ```
+    - **Response:** The response will be a JSON object containing the details of the created question.
+
+    - **Example Response:**
+        ```json
+        {
+            "id": 16,
+            "question": "What is the capital of France?",
+            "subject": "Geography",
+            "topic": "World Capitals",
+            "difficulty": "easy",
+            "marks": 10
+        }
+        ```
+    Here, the `id` is the unique identifier of the question in the database.
 
 ## Testing
 
-To test the functionality of the question paper generator, create a sample database using the `create_question` endpoint and then use the `generate_question_paper` endpoint to generate question papers with different parameters. Ensure that the generated question papers meet the specified criteria.
+To test the functionality of the Question Paper Generator, create a sample database using the `create_question` endpoint and then use the `generate_question_paper` endpoint to generate question papers with different parameters. Ensure that the generated question papers meet the specified criteria.
 
 ## Sample Database
 
 I am providing a sample database (`db.sqlite3`) with the project. If you wish to use this sample database, simply start the server. If you want to create a new database, delete `db.sqlite3` and then run the migrations before starting the server.
 
 **Note:** The example database provided is a local database file.
+
+## Database Creation Script
+
+To facilitate the testing and demonstration of the Question Paper Generator, I provided a Python script (`database_creation.py`). This script populates the database with a sample set of questions across different subjects, topics, and difficulty levels.
+
+### Running the Database Creation Script
+
+Before running this script, ensure that your Django development server is running. If not, start it using:
+
+```bash
+python manage.py runserver
+```
 
 ## Extending the Project
 
