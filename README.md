@@ -66,6 +66,7 @@ The application has two main routes:
         - `subject` (required, string): The subject for which the question paper is to be generated.
         - `easy_percentage`(required, integer), `medium_percentage` (required, integer), `hard_percentage` (required, integer): The percentage of easy, medium, and hard questions respectively. The sum of these percentages should be 100.
         - `num_of_easy_ques` (optional, integer), `num_of_medium_ques` (optional, integer), `num_of_hard_ques` (optional, integer): The number of easy, medium, and hard questions respectively.
+    - Make sure you replace base URL with your base URL
 
     - **Example Request:**
         ```json
@@ -92,6 +93,7 @@ The application has two main routes:
         - `topic` (string): The topic of the question.
         - `difficulty` (string): The difficulty level of the question.
         - `marks` (integer): The marks for the question.
+    - Make sure you replace base URL with your base URL
 
     - **Example Request:**
         ```json
