@@ -96,7 +96,7 @@ The application has two main routes:
         ```
     Here, the numbers represent the marks of the questions in the database. Each array is a combination of marks of questions that add up to the target marks for that difficulty level.
 
-    ```json [1, 1, 2]``` means for a easy paper of 4 marks, the question paper may take question in this type of marks distribution i.e there can 2 one mark questions and 1 two marks question. Note that if there are only 2 one mark questions in the database of that difficulty level of that particular subject, then for making a easy paper of 4 marks, the response won't include ```json [1, 1, 1, 1]``` as there are only two one mark questions available in the database of that difficulty level of that particular subject.
+    ```[1, 1, 2]``` means for a easy paper of 4 marks, the question paper may take question in this type of marks distribution i.e there can 2 one mark questions and 1 two marks question. Note that if there are only 2 one mark questions in the database of that difficulty level of that particular subject, then for making a easy paper of 4 marks, the response won't include ```[1, 1, 1, 1]``` as there are only two one mark questions available in the database of that difficulty level of that particular subject.
 
 2. **`create_question`**
 
