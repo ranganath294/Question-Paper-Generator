@@ -51,7 +51,7 @@ The application has two main routes:
     - **Parameters:**
         - `total_marks` (optional, default is 100): The total marks for the question paper.
         - `subject` (required, string): The subject for which the question paper is to be generated.
-        - `easy_percentage`, `medium_percentage`, `hard_percentage`: The percentage of easy, medium, and hard questions respectively. The sum of these percentages should be 100.
+        - `easy_percentage`(required, integer), `medium_percentage` (required, integer), `hard_percentage` (required, integer): The percentage of easy, medium, and hard questions respectively. The sum of these percentages should be 100.
         - `num_of_easy_ques` (optional, integer), `num_of_medium_ques` (optional, integer), `num_of_hard_ques` (optional, integer): The number of easy, medium, and hard questions respectively.
 
     - **Example Request:**
