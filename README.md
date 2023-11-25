@@ -38,14 +38,14 @@ This is a Django project that allows you to generate question papers based on ce
     python manage.py runserver
     ```
 
-    This will start the Django development server. You can access the application at `http://127.0.0.1:8000/`.
+    This will start the Django development server. You can access the application at `http://127.0.0.1:8000/` (Base URL).
 
 ## Using Postman
 You can use Postman to interact with these APIs. Simply enter the URL for the route you want to use, select the appropriate method (GET for generate_question_paper and POST for create_question), and enter the parameters in the Body section in JSON format.
 
 ## API Documentation
 
-The application has two main routes:
+The application has two main Endpoints:
 
 1. **`generate_question_paper`**
 
