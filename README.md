@@ -96,7 +96,9 @@ The application has two main routes:
         ```
     Here, the numbers represent the marks of the questions in the database. Each array is a combination of marks of questions that add up to the target marks for that difficulty level.
 
-    ```[1, 1, 2]``` means for a easy paper of 4 marks, the question paper may take question in this type of marks distribution i.e there can 2 one mark questions and 1 two marks question. Note that if there are only 2 one mark questions in the database of that difficulty level of that particular subject, then for making a easy paper of 4 marks, the response won't include ```[1, 1, 1, 1]``` as there are only two one mark questions available in the database of that difficulty level of that particular subject.
+    - **Understanding the Response:** The response from the `generate_question_paper` API is a list of combinations of questions for each difficulty level. Each combination is represented as a list of numbers, where each number represents the marks of a question. This means that for an easy paper of 4 marks, the question paper may include questions with this type of marks distribution: there can be 2 one-mark questions and 1 two-mark question.
+
+    It’s important to note that the response is based on the available questions in the database. If there are only 2 one-mark questions in the database for that difficulty level of that particular subject, then for making an easy paper of 4 marks, the response won’t include [1, 1, 1, 1] as a possible combination. This is because there are only two one-mark questions available in the database for that difficulty level of that particular subject.
 
 2. **`create_question`**
 
